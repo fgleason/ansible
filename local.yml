@@ -3,3 +3,8 @@
   tasks: 
   - name: Exec command
     shell: ls -l
+    register: ls
+
+  - debug: msg={{ ls.stdout }}
+  
+  - debug: var=ls
